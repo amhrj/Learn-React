@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Home from "./Home";
+import CounterApplication from './CounterApplication';
+import Header from './Components/Header'
+import FetchData from './FetchData';
+import ConditionalRendering from './ConditionalRendering';
+import ConditionalRendering2 from './ConditionalRendering2';
+import PropsPractice from './PropsPractice';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <div className="App">
+        <Header/>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/CounterApplication' element={<CounterApplication />} />
+          <Route path='/FetchData' element={<FetchData />} />
+          <Route path='/ConditionalRendering' element={<ConditionalRendering />} />
+          <Route path='/ConditionalRendering2' element={<ConditionalRendering2 />} />
+          <Route path='/PropsPractice' element={<PropsPractice name="Amrit" />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  )
 }
-
-export default App;
