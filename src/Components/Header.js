@@ -37,6 +37,9 @@ export default function Header(){
                             <HighlightLink to="/PropsPractice" as={Link}>
                                 Props Practice
                             </HighlightLink>
+                            <HighlightLink to="/HookCounter" as={Link}>
+                                Hook Counter
+                            </HighlightLink>
                         </Nav>     
                     </Navbar.Collapse>
                 </Container>

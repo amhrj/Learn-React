@@ -1,12 +1,17 @@
 import { useState } from "react";
 
 export default function ConditionalRendering() {
-  const [isToggled, setIsToggled] = useState(false);
+  const [details, setdetails] = useState("");
+
+  const handleChange = (e) => {
+    setdetails(e.target.value);
+  }
+  
   return (
     <>
-      <h1>I am Conditionally Rendering</h1>
-      <button onClick={() => setIsToggled(!isToggled)}>Toggle</button>
-      {isToggled ? <p>I am conditionally rendered</p> : null}
+      <h1>Contact Form</h1>
+      <input type="text" placeholder="Name" onChange={handleChange}></input>
+      <p>Name: {details}</p>
     </>
   );
 }

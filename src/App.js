@@ -8,6 +8,7 @@ import FetchData from './FetchData';
 import ConditionalRendering from './ConditionalRendering';
 import ConditionalRendering2 from './ConditionalRendering2';
 import PropsPractice from './PropsPractice';
+import HookCounter from './HookCounter';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path='/ConditionalRendering' element={<ConditionalRendering />} />
           <Route path='/ConditionalRendering2' element={<ConditionalRendering2 />} />
           <Route path='/PropsPractice' element={<PropsPractice name="Amrit" />} />
+          <Route path='/HookCounter' element={<HookCounter />} />
         </Routes>
       </div>
     </BrowserRouter>
